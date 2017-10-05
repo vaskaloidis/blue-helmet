@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	<%#
+    Configure default and controller-, and view-specific titles in
+    config/locales/en.yml. For more see:
+    https://github.com/calebthompson/title#usage
+	%>
+	<meta charset="utf-8"/>
+	<meta name="author" content="Vasilis Kaloidis"/>
+	<meta name="description" content="Blue Helmet Software">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Blue Helmet Software Company</title>
+	
+	<!-- Devicon Icons -->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	
+	<!-- Royal Preloader CSS -->
+	<%= stylesheet_link_tag "royal_preloader" %>
+	
+	<!-- jQuery Files -->
+	<!-- <script type="text/javascript" src="httdp://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" %>
+	
+	<!-- Parallax File -->
+	<%= javascript_include_tag "parallax.min.js" %>
+	<%#= javascript_include_tag "drift.js" %>
+	
+	
+	<!-- Royal Preloader -->
+	<%= javascript_include_tag "royal_preloader.min.js" %>
+	
+	<script type="text/javascript">
+		Royal_Preloader.config({
+			mode: 'number',
+			showProgress: false,
+			background: '#1d1d1d'
+		});
+	</script>
+	
+	<!-- Stylesheets -->
+	<%= stylesheet_link_tag "bootstrap.css" %>
+	<%= stylesheet_link_tag "ionicons.css" %>
+	<%= stylesheet_link_tag "pe-icon-7-stroke.css" %>
+	<%= stylesheet_link_tag "magnific-popup.css" %>
+	<%= stylesheet_link_tag "logoiconfont.css" %>
+	<%= stylesheet_link_tag "style.css" %>
+	<%= stylesheet_link_tag "colors/blue.css" %>
+	<%#= stylesheet_link_tag "base-light.css" %>
+	
+	<% login = false %>
+	
+	<!--<link type="text/css" href="css/colors/blue.css" />-->
+	<!--<link type="text/css" href="base-light.css" />-->
+	<!--<link rel="alternate .cssstylesheet" type="text/css" href="css/colors/green.css" title="green">-->
+	<!--<link rel="alternate stylesheet" type="text/css" href="css/colors/orange.css" title="orange">-->
+	<!--<link rel="alternate stylesheet" type="text/css" href="css/colors/red.css" title="red">-->
+	<!--<link rel="alternate stylesheet" type="text/css" href="css/colors/orangelight.css" title="orangelight">-->
+	<!--<link rel="alternate stylesheet" type="text/css" href="css/colors/pinkish.css" title="pinkish">-->
+	<!--<link rel="alternate stylesheet" type="text/css" href="css/colors/seagul.css" title="seagul">-->
+	<title><%#= title %>Blue Helmet Software</title>
+	<%= stylesheet_link_tag :application, media: "all" %>
+	
+	<%= csrf_meta_tags %>
+</head>
+
+<% flash.each do |name, msg| %>
+		<%= content_tag :div, msg, class: "alert alert-success" %>
+<% end %>
+
+<body class="royal_preloader" data-spy="scroll" data-target=".navbar" data-offset="70">
+
+<div id="royal_preloader"></div>
+
+<%= render 'layouts/header' %>
+
+<%#= render 'layouts/navbar' %>
+
+<%= yield %>
+
+<!-- Begin Footer -->
+<footer class="footer-padding background2">
+	<div class="container">
+		<div class="row no-margin-bottom">
+			<div class="text-center no-margin-bottom">
+				<button type="button" class="btn btn-primary btn-up-footer btn-lg scroll-top">Up</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="text-small text-center">
+				<hr>
+				<div class="row">
+					<p class="no-margin">&copy; Blue Helmet Software Company</p>
+					<!--<a href="<%#= sign_out_path %>" type="button" class="btn btn-primary btn-up-footer btn-lg">Logout</a>-->
+				</div>
+			</div><!-- /.column -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</footer><!-- /.footer -->
+<!-- Begin Footer -->
+
+<!-- Javascript Files -->
+<%= javascript_include_tag "bootstrap.min.js" %>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArLNT3t4qsJEBmR0R9P_6ueLIQz0Jvt1M&callback=initMap" async defer></script>
+<%= javascript_include_tag "google_maps_stock.js" %>
+<%= javascript_include_tag "particles.min.js" %>
+<%= javascript_include_tag "particlesRun" %>
+<%= javascript_include_tag "jquery.mixitup.js" %>
+<%= javascript_include_tag "form-validator.min.js" %>
+<%= javascript_include_tag "jquery.inview.min.js" %>
+<%= javascript_include_tag "jquery.countTo.js" %>
+<script type="text/javascript">
+	/* ---- Counter (our count) ---- */
+	$('#ourcount').one('inview', function (event, isInView) {
+		if(isInView) {
+			$('.timer').countTo({speed: 3000});
+		}
+	});
+</script>
+
+<%= javascript_include_tag "jquery.magnific-popup.min.js" %>
+<%= javascript_include_tag "scrollreveal.min.js" %>
+<%= javascript_include_tag "main.js" %>
+
+</body>
+
+</html>

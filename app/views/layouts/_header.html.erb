@@ -1,0 +1,46 @@
+<header>
+  <!-- Begin Navigation -->
+  <nav class="navbar navbar-logo navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand scroll-link" href="#home" data-id="home">
+            <!--<span class="icon-handle-streamline-vector logo">-->
+            <!--<h2>Blue Helmet</h2>-->
+            <%= link_to image_tag("logo_black.png", class: "logo1 topReveal", alt: 'Logo'), root_path %>
+            <!--</span>-->
+          </a>
+        </div>
+
+        <% if current_page?(root_url) %>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home" data-id="home" class="scroll-link">Home</a></li>
+                <li><a href="#ideology" data-id="ideology" class="scroll-link">Ideology</a></li>
+                <li><a href="#services" data-id="services" class="scroll-link">Services</a></li>
+                <li><a href="#packages" data-id="packages" class="scroll-link">Packages</a></li>
+                <li><a href="#contact" data-id="contact" class="scroll-link">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        <% else %>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="<%= root_url %>">Home</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+        <% end %>
+      </div>
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- End Navigation -->
+</header>
+<!-- End Header -->

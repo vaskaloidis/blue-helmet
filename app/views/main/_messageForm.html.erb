@@ -1,0 +1,57 @@
+<%= bootstrap_form_for(@contact_message) do |f| %>
+    <%#= f.error_notification %>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <div class="controls">
+          <%= f.text_field :subject %>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div><!-- /.column -->
+    <div class="col-sm-6">
+      <div class="form-group">
+        <div class="controls">
+          <%= f.text_field :phone %>
+        </div>
+      </div>
+    </div><!-- /.column -->
+  </div><!-- /.row -->
+  <div class="row mb10">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <div class="controls">
+          <%= f.text_field :name %>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div><!-- /.column -->
+    <div class="col-sm-6">
+      <div class="form-group">
+        <div class="controls">
+          <%= f.text_field :email %>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div><!-- /.column -->
+  </div><!-- /.row -->
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="form-group">
+        <div class="controls">
+          <%= f.text_area :content %>
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt15">
+    <div class="col-sm-6">
+      <div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div>
+    </div><!-- /.column -->
+    <div class="col-sm-6 text-right">
+      <%= f.submit "Send us your message!", class: 'btn btn-default btn-lg' %>
+    </div><!-- /.column -->
+  </div><!-- /.row -->
+<% end %>

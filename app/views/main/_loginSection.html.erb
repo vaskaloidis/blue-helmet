@@ -1,0 +1,27 @@
+<% if signed_in? %>
+    <section id="login" class="background1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 text-center">
+                <% if current_user.role == 'admin' %>
+                  <a href="<%= root_url %>admin"><h1>Admin Panel</h1></a>
+                <% else %>
+                    <a href="<%= root_url %>customer"><h1>View <%= current_user.email %> Profile</h1></a>
+                    Welcome <%= current_user.email %>
+                    <a href="<%= sign_out_path %>" data-method="delete" rel="nofollow">Logout of Blue Helmet</a>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </section>
+<% else %>
+		<section id="login" class="background2">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 text-center">
+						<%= render partial: '/sessions/form' %>
+					</div>
+				</div>
+			</div>
+		</section>
+<% end %>

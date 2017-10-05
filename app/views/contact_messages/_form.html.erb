@@ -1,0 +1,15 @@
+<%= simple_form_for @contact_message, remote: true do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :subject %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.input :content %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,10 @@
+<h1>Cuustomer: <%= @customer.email %></h1>
+<%= @customer.role %><br>
+<%= @customer.firstName %>, <%= @customer.lastName %><br>
+<%= @customer.company %><br>
+<%= @customer.phone %><br>
+
+<h2>Demo</h2>i
+<%= render 'form', demo: @new_customer %>
+
+<%= link_to 'Back', admin_path %> |

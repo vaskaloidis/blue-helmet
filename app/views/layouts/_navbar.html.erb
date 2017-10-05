@@ -1,0 +1,31 @@
+<% if signed_in? %>
+    <% if current_user.role == 'admin' %>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "Blue Helmet", root_path, class: "navbar-brand" %>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav">
+            <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</a></li>-->
+            <li><%= link_to "All Projects", admin_path %> </li>
+            <li><%= link_to "New Project", root_path %> </li>
+            <li><%= link_to "Logout", root_path %> </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Blue Helmet</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <% end %>
+
+<% end %>

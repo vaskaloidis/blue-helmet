@@ -1,0 +1,51 @@
+<%= render 'main/jumbotron' %>
+
+<%#= render 'main/ideology' %>
+
+<!-- Welcome + Services -->
+<section class="background1" id="ideology">
+	
+	<%= render 'main/hello' %>
+	
+	<div id="our-process-title" class="pt30 pb30">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h4 class="no-margin">Ideology</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%= render 'main/services' %>
+</section><!-- /.section -->
+
+<%= render 'main/products' %>
+
+<%= render 'main/carousel' %>
+
+<!-- Begin About -->
+<%#= render 'main/about' %>
+
+<!-- Begin Our Count -->
+<%= render 'main/numbers' %>
+
+<!-- SOFTWARE PRICING -->
+<%= render 'main/packages' %>
+
+<!-- LOGIN -->
+<%#= render 'main/timeline' %>
+
+<!-- LOGIN -->
+<%#= render 'main/work' %>
+
+<!-- LOGIN -->
+<%#= render 'main/loginSection' %>
+
+<%= render 'main/contact' %>
+
+<!-- MAP -->
+<div id="map"></div>
+
+<% if @login %>
+		<%= render 'main/loginSection' %>
+<% end %>
