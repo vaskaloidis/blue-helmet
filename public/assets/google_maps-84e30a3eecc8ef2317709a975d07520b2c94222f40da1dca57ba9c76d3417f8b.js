@@ -1,4 +1,5 @@
 /* ---- Google Maps ---- */
+
 function initMap() {
     var mapOptions = {
         zoom: 15,
@@ -43,3 +44,4 @@ function initMap() {
         title: 'Located in Tampa, Florida!'
     });
 }
+;
