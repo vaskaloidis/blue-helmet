@@ -65,6 +65,7 @@ group :staging, :production do
   gem 'honeybadger'
   gem 'rack-timeout'
   gem 'rails_stdout_logging'
+  gem 'rollbar'
 end
 
 
