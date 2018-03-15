@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
+  repo_name = '#{repo_name}/#{repo_name}' unless repo_name.include?('/')
+  'https://github.com/#{repo_name}.git'
 end
 
 
@@ -10,51 +10,40 @@ end
 gem 'rails', '~> 5.1.3'
 gem 'puma', '~> 3.7'
 gem 'pg'
-# Use Puma as the app server
-# Use SCSS for stylesheets
+
 gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
 gem 'coffee-rails', '~> 4.2'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-gem "nested_scaffold"
-gem "bootstrap_form"
-gem "simple_form"
+gem 'nested_scaffold'
+gem 'bootstrap_form'
+gem 'simple_form'
 gem 'formtastic', '~> 3.0'
-gem "jquery-rails"
-gem "sprockets", ">= 3.0.0"
+gem 'jquery-rails'
+gem 'sprockets', '>= 3.0.0'
 
-gem "normalize-rails", "~> 3.0.0"
-# gem "high_voltage"
-gem "autoprefixer-rails"
-# gem "flutie"
+gem 'normalize-rails', '~> 3.0.0'
+gem 'autoprefixer-rails'
 
-gem "rack-canonical-host"
+gem 'rack-canonical-host'
+
+gem 'rest-client'
+gem 'json'
+
+gem 'dotenv-rails', :groups => [:development, :test]
 
 group :development do
-  gem "dotenv-rails"
-  gem "awesome_print"
-  gem "pry"
-  gem "pry-rails"
-  gem "pry-byebug"
-  gem "better_errors"
-  gem "binding_of_caller"
-  gem "spring-commands-rspec"
-  gem "rails-erd"
+  gem 'dotenv-rails'
+  gem 'awesome_print'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'spring-commands-rspec'
 
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -65,7 +54,7 @@ group :development do
 end
 
 group :development, :staging do
-  gem "rack-mini-profiler", require: false
+  gem 'rack-mini-profiler', require: false
 end
 
 group :test do
@@ -73,9 +62,9 @@ end
 
 group :staging, :production do
   # Heroku
-  gem "honeybadger"
-  gem "rack-timeout"
-  gem "rails_stdout_logging"
+  gem 'honeybadger'
+  gem 'rack-timeout'
+  gem 'rails_stdout_logging'
 end
 
 

@@ -25,6 +25,8 @@ class ContactMessagesController < ApplicationController
   def create
     @contact_message = ContactMessage.new(contact_message_params)
 
+    ContactMailer.contact_message(@contact_message.name, @contact_message.subject, @contact_message.phone, @contact_message.email, @contact_message.content).deliver_now
+
     if @contact_message.save
       redirect_to root_url, notice: 'Thanks for the message! For immediate service contact (209) 643-5638.'
     else
