@@ -66,7 +66,6 @@ end
 group :staging, :production do
   gem 'rails_12factor'
   # Heroku
-  gem 'honeybadger'
   gem 'rack-timeout'
   gem 'rails_stdout_logging'
 end
