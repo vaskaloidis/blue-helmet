@@ -28,7 +28,7 @@ module Bluehelmet
         port:                 587,
         domain:               'gmail.com',
         user_name:            'blue.helmet.dev@gmail.com',
-        password:             'Godzilla1!',
+        password:             ENV['GMAIL_PASSWORD'],
         authentication:       :plain,
         enable_starttls_auto: true
     }
